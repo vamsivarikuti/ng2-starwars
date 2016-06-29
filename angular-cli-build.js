@@ -11,11 +11,15 @@ module.exports = function(defaults) {
     vendorNpmFiles: [
       'systemjs/dist/system-polyfills.js',
       'systemjs/dist/system.src.js',
-      'zone.js/dist/**/*.+(js|js.map)',
+      'zone.js/dist/**/*.js',
       'es6-shim/es6-shim.js',
-      'reflect-metadata/**/*.+(ts|js|js.map)',
-      'rxjs/**/*.+(js|js.map)',
-      '@angular/**/*.+(js|js.map)'
-    ]
+      'reflect-metadata/**/*.js',
+      'rxjs/**/*.js',
+      '@angular/**/*.js',
+      '@angular2-material/**/*.js',
+    ],
+    sassCompiler: {
+      cacheExclude: [/\/_[^\/]+$/]
+    }
   });
 };
