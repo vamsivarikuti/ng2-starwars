@@ -7,19 +7,19 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-    '@angular2-material': 'vendor/@angular2-material'
+  '@angular2-material': 'vendor/@angular2-material'
 };
 
 /** User packages configuration. */
-const packages: any = {
-};
+const packages: any = {};
 // put the names of any of your Material components here
-const materialPkgs:string[] = [
+const materialPkgs: string[] = [
   'core',
   'button',
   'card',
   'icon',
   'list',
+  'progress-circle',
   'sidenav',
   'toolbar'
 ];
@@ -48,12 +48,14 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
+  'app/people',
+  'app/people/people-list',
   /** @cli-barrel */
 ];
 
 const cliSystemConfigPackages: any = {};
 barrels.forEach((barrelName: string) => {
-  cliSystemConfigPackages[barrelName] = { main: 'index' };
+  cliSystemConfigPackages[barrelName] = {main: 'index'};
 });
 
 /** Type declaration for ambient System. */
@@ -70,4 +72,4 @@ System.config({
 });
 
 // Apply the user's configuration.
-System.config({ map, packages });
+System.config({map, packages});

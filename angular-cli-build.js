@@ -18,8 +18,8 @@ module.exports = function(defaults) {
       '@angular/**/*.js',
       '@angular2-material/**/*.js',
     ],
-    sassCompiler: {
-      cacheExclude: [/\/_[^\/]+$/]
-    }
+    // sassCompiler: {
+    //   cacheExclude: [/\/_[^\/]+$/]
+    // }
   });
 };

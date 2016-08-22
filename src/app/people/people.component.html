@@ -1,0 +1,20 @@
+<h2>People</h2>
+
+<div class="cards-container">
+  <md-card *ngFor="let person of people">
+    <md-card-title>{{person.name}}</md-card-title>
+    <md-card-content>
+      {{person.name}}
+    </md-card-content>
+  </md-card>
+</div>
+
+<div *ngIf="isLoading" style="text-align: center">
+  <md-content layout="column" layout-align="center center">
+    <md-progress-circle mode="indeterminate"></md-progress-circle>
+  </md-content>
+</div>
+
+<div class="text-center load-more-container" *ngIf="data?.next && !isLoading">
+  <button md-raised-button (click)="loadPeople()">Load More</button>
+</div>
